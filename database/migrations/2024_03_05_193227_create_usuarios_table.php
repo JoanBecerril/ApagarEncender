@@ -17,13 +17,20 @@ return new class extends Migration
             $table->string('apell_usr',35);
             $table->string('email_usr')->unique();
             $table->string('pwd_usr',60);
-            $table->enum('sede_usr', ['Central', 'Barcelona', 'Berlin', 'Montreal', 'Por definir']);
+
             // TIPOS DE ESTADO -> 0 = BAJA - 1 = ALTA 
             $table->boolean('estado')->default(0);
+
+            // 1 = admin  / 2 = gestor de equipo / 3 = tecnico / 4 = cliente /
+            $table->enum('rol_usr',[1, 2, 3, 4]);
+            
+            $table->unsignedBigInteger('id_sede');
+            $table->foreign('id_sede')->references('id')->on('sede');
             $table->timestamps();
         });
     }
-
+    // $table->enum('sede_usr', ['Central', 'Barcelona', 'Berlin', 'Montreal', 'Por definir']);
+    
     /**
      * Reverse the migrations.
      */
