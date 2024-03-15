@@ -16,16 +16,11 @@ class categoriasSeeder extends Seeder
         //CREACION DE CATEGORIAS
         DB::table('categorias')->insert([
             'id' => 1,
-            'name_cat' => 'Software',
-            'created_at' => now(),
-            'updated_at' => now(),
+            'name_cat' => 'Software'
         ]);
-
         DB::table('categorias')->insert([
             'id' => 2,
-            'name_cat' => 'Hardware',
-            'created_at' => now(),
-            'updated_at' => now(),
+            'name_cat' => 'Hardware'
         ]);
     }
 }

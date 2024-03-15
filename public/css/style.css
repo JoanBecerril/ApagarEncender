@@ -1,0 +1,448 @@
+* {
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+}
+
+html {
+    margin: 0 10vh;
+    color: white;
+    padding: 0;
+    background-color: #1d2d43;
+}
+
+body {
+    color: white !important;
+    padding: 0;
+    background-color: #1d2d43 !important;
+}
+
+/* HEADER */
+
+header {
+    margin: 0 -10vh;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0 2.5vh;
+    background-color: #132136;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header div {
+    display: flex;
+    text-align: center;
+}
+
+header p {
+    margin: 0 2vh;
+    font-size: 1.6vh;
+    transition: 0.3s;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header img {
+    justify-content: left;
+    height: 5vh;
+}
+
+i {
+    color: white;
+}
+
+/* FILTROS CLIENTE */
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtros {
+    margin: 4vh 0;
+    border-radius: 2.5vh;
+    padding: 2vh 0 2vh 2vh;
+    background-color: #132136;
+}
+
+.topder {
+    margin: 4vh 0;
+    border-radius: 2.5vh;
+    padding: 2vh;
+    background-color: #132136;
+}
+
+.topder button {
+    height: 100%;
+    border: none;
+    border-radius: 0.8vh;
+    text-align: center;
+    font-size: 2.25vh;
+    font-weight: 600;
+}
+
+.topder i {
+    color: #132136;
+}
+
+.filtros select,
+.filtros button {
+    height: 100%;
+    margin-right: 2vh;
+    border: none;
+    border-radius: 0.8vh;
+    text-align: center;
+    font-size: 2.25vh;
+    font-weight: 600;
+}
+
+.filtros button {
+    background-color: white;
+}
+
+.filtros button>i {
+    color: #132136;
+}
+
+.calendario,
+.calendario i {
+    background-color: transparent !important;
+    color: white !important;
+    margin: 0 -0.5vh 0 -1.5vh !important;
+}
+
+/* PAGINA CLIENTE */
+
+#cliente {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2vh 0;
+    border: #132136 solid 10px;
+    border-radius: 3vh;
+}
+
+.clienteIncidencias {
+    margin: 1vh;
+    padding: 1vh;
+    background-color: #3f597c;
+    display: flex;
+    border-radius: 1vh;
+}
+
+.izq {
+    width: 60%;
+    padding: 1vh;
+}
+
+.izq button,
+.izq i {
+    color: #132136 !important;
+}
+
+.izq button {
+    margin: 0 0 0 2vh;
+    border: none;
+    border-radius: 0.8vh;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+.masinfo {
+    display: flex;
+}
+
+.der1 {
+    width: 25%;
+    height: 100%;
+    padding: 1vh;
+}
+
+.der2 {
+    width: 15%;
+    height: 100%;
+    padding: 1vh;
+}
+
+.prioridad {
+    height: 50%;
+    text-align: center;
+}
+
+.iconoEstado {
+    width: 10%;
+}
+
+.estado {
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    justify-content: center;
+}
+
+#estado {
+    background-color: transparent;
+    border: none;
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    font-size: 2.25vh;
+    font-weight: 600;
+    color: white;
+}
+
+#estado:focus {
+    outline: 0;
+}
+
+/* ESTRELLAS */
+
+.estrellaverde {
+    color: #03ad54;
+}
+
+.estrellaamarilla {
+    color: #fcc200;
+}
+
+.estrellaroja {
+    color: #ee415a;
+}
+
+/* SELECT PRIORIDAD */
+
+#prioridad {
+    border: none;
+    height: 40%;
+    margin: 0 0 5% 0;
+    width: 100%;
+    border-radius: 0.8vh;
+    text-align: center;
+    font-size: 2.25vh;
+    font-weight: 600;
+}
+
+#prioridad:focus {
+    outline: 0;
+}
+
+/* PAGINA MAS INFO INCIDENCIA */
+
+#incidencia {
+    margin: 4vh 0;
+    border: #132136 solid 10px;
+    border-radius: 3vh;
+}
+
+.incidenciaInfo {
+    height: 100%;
+    margin: 1vh;
+    padding: 1vh 2vh;
+    background-color: #3f597c;
+    /* display: flex; */
+    border-radius: 1vh;
+}
+
+.arribaInfo {
+    margin: 0 0 6vh 0;
+}
+
+.abajoInfo {
+    display: flex;
+}
+
+.incidenciaInfo h4 {
+    width: 100%;
+    font-size: 2.8vh;
+}
+
+.izqInfo,
+.derInfo {
+    width: 50%;
+    height: 100%;
+}
+
+.prioridadInfo {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.cliente-container.hideClosedIncidences .cerrada {
+    display: none;
+}
+
+#prioridadInfo {
+    border: none;
+    height: 40%;
+    width: 60%;
+    border-radius: 0.8vh;
+    text-align: center;
+    font-size: 2.25vh;
+    font-weight: 600;
+}
+
+#prioridadInfo:focus {
+    outline: 0;
+}
+
+/* PAGINA NUEVA INCIDENCIA */
+
+#nueva {
+    margin: 3vh auto;
+    padding: 2vh;
+    border: #132136 solid 10px;
+    border-radius: 3vh;
+}
+
+.titulosh2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 4vh;
+    margin-top: -2vh;
+}
+
+#nueva label {
+    font-size: 2vh;
+}
+
+#nueva input,
+#nueva textarea,
+#nueva select {
+    color: white;
+    width: 100%;
+    background-color: #3f597c;
+    padding: 1vh;
+    background-color: #3f597c;
+    display: flex;
+    border-radius: 1vh;
+    border: 0;
+    outline: none;
+}
+
+#nueva button {
+    font-size: 2.25vh;
+    font-weight: 700;
+    height: 5vh;
+    width: 100%;
+    background-color: white;
+    border-radius: 1vh;
+    color: #132136;
+    border: 0;
+    outline: none;
+}
+
+/* BARRA SCROLL */
+
+body::-webkit-scrollbar {
+    width: 0.8vh;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3f597c;
+    border-radius: 0.25vh;
+}
+
+/* RESPONSIVE 1 */
+
+@media screen and (max-width: 1050px) {
+
+    html {
+        margin: 0 2vh;
+        color: white;
+        padding: 0;
+        background-color: #1d2d43;
+    }
+
+    header {
+        margin: 0 -2vh;
+    }
+
+    header img {
+        height: 6vh;
+        content: url('/src/ONOFF_LOGO_BLANCO.png');
+    }
+
+    .flitros {
+        margin: 4vh auto;
+    }
+
+    .izq {
+        width: 40%;
+    }
+
+    .der1 {
+        width: 35%;
+    }
+
+    .der2 {
+        width: 25%;
+    }
+}
+
+/* RESPONSIVE 2 */
+
+@media screen and (max-width: 690px) {
+
+    header img {
+        height: auto;
+        width: 25vh;
+        margin: 0 0 2vh 0;
+        content: url('/src/ONOFF_LOGO_GRANDE_2_BLANCO.png');
+    }
+
+    .container-fluid,
+    .container-fluid div {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .clienteIncidencias {
+        display: block;
+    }
+
+    .izq {
+        width: 100%;
+        padding: 1vh;
+    }
+
+    .der1 {
+        height: auto;
+        width: 100%;
+        padding: 1vh;
+    }
+
+    .der2 {
+        height: auto;
+        width: 100%;
+        padding: 1vh;
+    }
+
+    #prioridad {
+        margin: 0 0 1vh 0;
+    }
+
+    #estado {
+        margin: 0;
+    }
+
+    .top {
+        display: block;
+        text-align: center;
+    }
+
+    .filtros,
+    .topder {
+        width: fit-content;
+    }
+}

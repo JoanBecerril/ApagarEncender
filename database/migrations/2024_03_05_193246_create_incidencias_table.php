@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('incidencias', function (Blueprint $table) {
             $table->id();
-            $table->string('name_incid',30);
+            $table->string('name_incid',50);
             $table->string('desc_incid', 150);
+            // PRIORIDAD  ALTA = 1 / MEDIA = 2 / BAJA = 3 / VALORANDO = 4
+            $table->enum('prioridad_incid', [1, 2, 3, 4]);
             // Sin Asignar = 1 / Asignado = 2 / Reparando = 3 / Resuelta = 4 / Cerrada = 5
-            $table->enum('estado_incid', [1, 2, 3, 4, 5])->default(1);
-            // Tecnico al que le asignan la incidencia
-            $table->unsignedBigInteger('id_tecnico');
+            $table->enum('estado_incid', [1, 2, 3, 4, 5]);
+
+            $table->unsignedBigInteger('id_tecnico')->nullable();
             // Personal que pone la incidencia
             $table->unsignedBigInteger('id_cliente');
             // Ponemos la subcategoria porque asi la categoria inicial se le asigna

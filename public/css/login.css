@@ -1,0 +1,56 @@
+* {
+    font-family: "Ubuntu Mono", monospace;
+    font-style: normal;
+}
+
+html {
+    margin: 25vh auto 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0;
+    background-color: #1d2d43;
+}
+
+body {
+    color: white !important;
+    padding: 0;
+    background-color: #1d2d43 !important;
+}
+
+.login {
+    text-align: center;
+}
+
+.login img {
+    width: 40vh;
+    margin: 0 0 3vh 0;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.loginform label {
+    font-size: 1.5vh;
+}
+
+.loginform input {
+    outline: none;
+}
+
+.loginform button {
+    background-color: #132136;
+    border: 0;
+    transition: 0.1s;
+    width: 100%;
+}
+
+.loginform button:hover {
+    background-color: #3f597c;
+}
+
+#toggle-password {
+    background-color: #ffffff;
+    color: #132136;
+}

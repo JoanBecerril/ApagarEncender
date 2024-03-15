@@ -20,41 +20,13 @@ class DatabaseSeeder extends Seeder
     {
         // CREACION DE SEDES
         $this->call(sedesSeeder::class);
-
         // CREACION DE CATEGORIAS
         $this->call(categoriasSeeder::class);
-
         // CREACION DE SUBCATEGORIAS
         $this->call(subcategoriasSeeeder::class);
-
         // CREACION DE USUARIOS
         $this->call(usuariosSeeder::class);
-        
-        // \App\Models\sedes::factory()->create([
-        //     'id' => 1,
-        //     'nom_sede' => 'Barcelona'
-        // ]);
-        // $sede = new sedes();
-        // $sede->id = 1;
-        // $sede-> nom_sede = "Barcelona";
-        // $sede->save();
-
-        // $sede2 = new sedes();
-        // $sede2->id = 2;
-        // $sede2-> nom_sede = "Berlín";
-        // $sede2->save();
-
-        // $sede3 = new sedes();
-        // $sede3->id = 3;
-        // $sede3-> nom_sede = "Montreal";
-        // $sede3->save();
-
-
-        // Creacion de
-        // \App\Models\User::factory(10)->create();
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // CREACION DE INCIDENCIAS
+        $this->call(incidenciaSeeder::class);
     }
 }

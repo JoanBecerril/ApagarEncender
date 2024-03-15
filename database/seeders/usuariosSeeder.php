@@ -68,9 +68,7 @@ class usuariosSeeder extends Seeder
             'pwd_usr' => bcrypt('qweQWE123'),
             'estado' => 0,  /* DADO DE BAJA */
             'rol_usr' => 2, /* ROL DE GESTOR DE EQUIPO */
-            'id_sede' => $idsede2, /* SEDE BARCELONA */
-            'created_at' => now(),
-            'updated_at' => now()
+            'id_sede' => $idsede2 /* SEDE BARCELONA */
         ]);
 
         // TECNICOS
@@ -86,6 +84,7 @@ class usuariosSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+        // BARCELONA DESHABILITADO
         DB::table('usuarios')->insert([
             'id' => 6,
             'name_usr' => 'Ian',
@@ -104,7 +103,7 @@ class usuariosSeeder extends Seeder
             'id' => 7,
             'name_usr' => 'Carlos',
             'apell_usr' => 'Mendoza',
-            'email_usr' => 'mendozacarlos@gmail.com',
+            'email_usr' => '@gmail.com',
             'pwd_usr' => bcrypt('qweQWE123'),
             'estado' => 0, /* DADO DE BAJA */
             'rol_usr' => 4, /* ROL DE CLIENTE */
